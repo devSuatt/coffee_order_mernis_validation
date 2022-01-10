@@ -6,15 +6,15 @@ import entities.Customer;
 
 public class StarbucksCustomerManager extends BaseCustomerManager {
 
-    private CustomerCheckService customerCheckService;
+    private CustomerCheckService checkService;
 
     public StarbucksCustomerManager(CustomerCheckService customerCheckService) {
-        this.customerCheckService = customerCheckService;
+        this.checkService = customerCheckService;
     }
 
     @Override
     public void save(Customer customer) {
-        if (customerCheckService.checkIfRealPerson(customer)) {
+        if (checkService.checkIfRealPerson(customer)) {
             super.save(customer);
         }
         else System.out.println("no valid person");
