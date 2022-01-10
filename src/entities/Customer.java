@@ -1,6 +1,8 @@
 package entities;
 
-public class Customer {
+import abstracts.Entity;
+
+public class Customer implements Entity {
     public int id;
     public String firstName;
     public String lastName;

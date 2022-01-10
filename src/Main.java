@@ -13,6 +13,7 @@ public class Main {
         Customer c1 = new Customer(1, "Suat", "TÜRKOĞLU", 1996, "TC_KIMLIK_NO");
 
         customerManager.save(c1);
+
     }
 
 }
